@@ -1,39 +1,28 @@
-# tksimple.Label
+# tksimple.MatPlotLibFigure
 
 ---
-## Label-creation
+## MatPlotLibFigure-creation
 ```python
-label = Label(_master, group=None, **kwargs)
+matplotlibfigure = MatPlotLibFigure(_master, fig, group=None, toolBar=False)
 ```
 Widget:
-The Label widget is used to display one line text or images.
-## Label-Methods
+Use this widget to display plots from matplotlib library.
+Pass the Figure instance from matplotlib.
+## MatPlotLibFigure-Methods
 ```python
-label.clear()->None
+matplotlibfigure.draw()->None
 ```
-Clears the displayed Text on the Label.
-- return 
-```python
-label.clearImage()->None
-```
-Clears the displayed image.
-- return 
-```python
-label.setImage(img:Union[TkImage, PILImage])->None
-```
-Set the image displayed on the Label.
-Use either an 'TkImage' or an 'PILImage' instance.
--  img:
+Draws the figure.
 - return 
 ## Widget-Methods
 ```python
-label.addChildWidgets(*args)->None
+matplotlibfigure.addChildWidgets(*args)->None
 ```
 Adds/Overwrites all Child widgets from this widget with new ones.
 -  args:
 - return 
 ```python
-label.applyTkOption(**kwargs)->None
+matplotlibfigure.applyTkOption(**kwargs)->None
 ```
 Apply one or more tkinter attribues to this widget.
 Instead of:
@@ -43,7 +32,7 @@ widget.applyTkOption(text="This is a text!", ...)
 -  kwargs:
 - return 
 ```python
-label.attachToolTip(text:str, atext:str="", group=None, waitBeforeShow=.5)->None
+matplotlibfigure.attachToolTip(text:str, atext:str="", group=None, waitBeforeShow=.5)->None
 ```
 Attaches a tooltip that opens on hover over this Widget longer than 'waitBeforeShow' seconds.
 -  text: Text that will be shown in ToolTip
@@ -52,7 +41,7 @@ Attaches a tooltip that opens on hover over this Widget longer than 'waitBeforeS
 -  waitBeforeShow: Time the user have to hover over this widget to show the TooTip
 - return  ToolTip instance for further configuration
 ```python
-label.bind(func:Callable, event:Union[EventType, Key, Mouse, str], args:list=None, priority:int=0, defaultArgs=False, disableArgs=False)->None
+matplotlibfigure.bind(func:Callable, event:Union[EventType, Key, Mouse, str], args:list=None, priority:int=0, defaultArgs=False, disableArgs=False)->None
 ```
 Binds a specific event to the Widget. Runs given function on trigger.
 -  func: function get called on trigger
@@ -63,94 +52,94 @@ Binds a specific event to the Widget. Runs given function on trigger.
 -  disableArgs: if True no args gets passed.
 - return 
 ```python
-label.canTakeFocusByTab(b:bool=False)->None
+matplotlibfigure.canTakeFocusByTab(b:bool=False)->None
 ```
 Set if this widget can take focus by pressing tab.
 Default: True
 -  b:
 - return 
 ```python
-label.clearChildWidgets()->None
+matplotlibfigure.clearChildWidgets()->None
 ```
 Clears the child-widgets.
 - return 
 ```python
-label.destroy()->None
+matplotlibfigure.destroy()->None
 ```
 Destroys this widget.
 The Widget instance cannot be used after destroying it!
 Can be overwritten!
 - return 
 ```python
-label.generateEvent(event:Union[EventType, Key, Mouse, str])->None
+matplotlibfigure.generateEvent(event:Union[EventType, Key, Mouse, str])->None
 ```
 Triggers given event on this widget.
 @note Custom Events are not implemented yet!
 -  event:
 - return 
 ```python
-label.getHeight()->None
+matplotlibfigure.getHeight()->None
 ```
 Returns the Widget Height.
 May be only possible after using any place manager.
 - return 
 ```python
-label.getID()->str
+matplotlibfigure.getID()->str
 ```
 Returns this widget id.
 - return 
 ```python
-label.getPosition()->Location2D
+matplotlibfigure.getPosition()->Location2D
 ```
 Returns the widget position.
 May be only possible after using any place manager.
 - return 
 ```python
-label.getPositionToMaster()->Location2D
+matplotlibfigure.getPositionToMaster()->Location2D
 ```
 Returns the widget position relative to master window.
 May be only possible after using any place manager.
 - return 
 ```python
-label.getRelScreenPos()->Location2D
+matplotlibfigure.getRelScreenPos()->Location2D
 ```
 Returns the location of this widget relative to the screen.
 ```python
-label.getText()->None
+matplotlibfigure.getText()->None
 ```
 Returns the set text.
 - return 
 ```python
-label.getTkMaster()->Tk | Toplevel
+matplotlibfigure.getTkMaster()->Tk | Toplevel
 ```
 Returns the highest master (Tk/Toplevel) of this widget.
 - return 
 ```python
-label.getWidth()->None
+matplotlibfigure.getWidth()->None
 ```
 Returns the Widget Width.
 May be only possible after using any place manager.
 - return 
 ```python
-label.grid(row=0, column=0)->None
+matplotlibfigure.grid(row=0, column=0)->None
 ```
 Default tkinter grid-manager.
 -  row:
 -  column:
 - return 
 ```python
-label.isFocus()->None
+matplotlibfigure.isFocus()->None
 ```
 Returns a boolean if this widget is currently no focus.
 - return 
 ```python
-label.lift(widg=None)->None
+matplotlibfigure.lift(widg=None)->None
 ```
 Lifts this widget in front of all other or in front of given Widget.
 -  widg:
 - return 
 ```python
-label.place(x=None, y=None, width=None, height=None, anchor:Anchor=Anchor.UP_LEFT)->None
+matplotlibfigure.place(x=None, y=None, width=None, height=None, anchor:Anchor=Anchor.UP_LEFT)->None
 ```
 Place the widget with fix coords and width and height.
 width and height can be left out and be handled by tkinter to set is automatically.
@@ -162,13 +151,13 @@ Can be overwritten!
 -  anchor: Set the fixpoint. Default: Upper left corner.
 - return 
 ```python
-label.placeForget()->None
+matplotlibfigure.placeForget()->None
 ```
 Removes this widget from its master.
 Can be placed again after.
 - return 
 ```python
-label.placeRelative(fixX:int=None,
+matplotlibfigure.placeRelative(fixX:int=None,
  fixY:int=None,
  fixWidth:int=None,
  fixHeight:int=None,
@@ -217,19 +206,19 @@ xOffsetLeft=50 means that the widget has 50% of the master-width and is right or
 -  updateOnResize: True -> registers to update on resize (Default) | False -> update once
 - return 
 ```python
-label.setBg(col:Union[Color, str])->None
+matplotlibfigure.setBg(col:Union[Color, str])->None
 ```
 Set the background color of this widget.
 -  col: Use Color enum, tkinter string or hex-code.
 - return 
 ```python
-label.setBorderWidth(bd:int)->None
+matplotlibfigure.setBorderWidth(bd:int)->None
 ```
 Some Widgets can change their border size.
 -  bd:
 - return 
 ```python
-label.setCompound(dir_:Direction)->None
+matplotlibfigure.setCompound(dir_:Direction)->None
 ```
 Select the Compound of an image behind a text.
 example:
@@ -237,7 +226,7 @@ example:
 -  dir_:
 - return 
 ```python
-label.setCursor(c:Cursor)->None
+matplotlibfigure.setCursor(c:Cursor)->None
 ```
 Set cursor image from Cursor enum or default tkinter string.
 This only applies while hovering over this widget.
@@ -245,28 +234,28 @@ This only applies while hovering over this widget.
 -  c:
 - return 
 ```python
-label.setDisabled()->None
+matplotlibfigure.setDisabled()->None
 ```
 Disables this widget.
 - return 
 ```python
-label.setEnabled()->None
+matplotlibfigure.setEnabled()->None
 ```
 Enables this widget.
 - return 
 ```python
-label.setFg(col:Union[Color, str])->None
+matplotlibfigure.setFg(col:Union[Color, str])->None
 ```
 Set the text color of this widget.
 -  col: Use Color enum, tkinter string or hex-code.
 - return 
 ```python
-label.setFocus()->None
+matplotlibfigure.setFocus()->None
 ```
 Sets the focus to this Window.
 - return 
 ```python
-label.setFont(size:int=10, art=FontType.ARIAL, underline=False, bold=False, slant=False, overstrike=False)->None
+matplotlibfigure.setFont(size:int=10, art=FontType.ARIAL, underline=False, bold=False, slant=False, overstrike=False)->None
 ```
 Use this method to configure the Font.
 -  size: text size
@@ -277,7 +266,7 @@ Use this method to configure the Font.
 -  overstrike: text is overstrike
 - return 
 ```python
-label.setOrientation(ori:Orient)->None
+matplotlibfigure.setOrientation(ori:Orient)->None
 ```
 Set the Orientation via Orient enum.
 Used for process bars, Scales etc.
@@ -287,39 +276,39 @@ Possible orientations:
 -  ori:
 - return 
 ```python
-label.setStyle(style:Style)->None
+matplotlibfigure.setStyle(style:Style)->None
 ```
 Set widget style.
 Use Style enum to choose between styles.
 -  style:
 - return 
 ```python
-label.setText(text)->None
+matplotlibfigure.setText(text)->None
 ```
 Set the text of this widget.
 -  text:
 - return 
 ```python
-label.setTextOrientation(ori:Anchor=Anchor.LEFT)->None
+matplotlibfigure.setTextOrientation(ori:Anchor=Anchor.LEFT)->None
 ```
 Set the Text align.
 Default is 'Anchor.CENTER'
 -  ori:
 - return 
 ```python
-label.unbind(event:Union[EventType, Key, Mouse])->None
+matplotlibfigure.unbind(event:Union[EventType, Key, Mouse])->None
 ```
 Unbinds all Events from given EventType.
 -  event:
 - return 
 ```python
-label.unregisterChildWidget(w)->None
+matplotlibfigure.unregisterChildWidget(w)->None
 ```
 Unregisters specific Child widget from this Master.
 -  w:
 - return 
 ```python
-label.update()->None
+matplotlibfigure.update()->None
 ```
 Calls the tkinter update of this widget.
 Processes all pending Events.
@@ -327,12 +316,12 @@ Redaws this widget.
 ...
 - return 
 ```python
-label.updateIdleTasks()->None
+matplotlibfigure.updateIdleTasks()->None
 ```
 Updates only the tkinter idle tasks.
 - return 
 ```python
-label.updateRelativePlace()->None
+matplotlibfigure.updateRelativePlace()->None
 ```
 Updates the relative place of this widget.
 Only updates if the widget ist placed relative.

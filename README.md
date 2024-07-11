@@ -1,51 +1,45 @@
 # Simple Tkinter Library Reference
-### Getting Started
-[Create your first Window](/widgets/LABEL.md)
-
+* [Create your first Window](/GETTING_STARTED.md)
 ### Content
 #### Window
-[tksimple.Tk](/widgets/LABEL.md) \
-[tksimple.Toplevel](/widgets/LABEL.md) \
-[tksimple.Dialog](/widgets/LABEL.md) 
+* [tksimple.Tk](/widgets/TK.md)
+* [tksimple.Toplevel](/widgets/TOPLEVEL.md)
+* [tksimple.Dialog](/widgets/DIALOG.md)
 #### Default Widgets
-[tksimple.Label](/widgets/LABEL.md) \
-[tksimple.Button](/widgets/LABEL.md) \
-[tksimple.Entry](/widgets/LABEL.md) \
-[tksimple.Text](/widgets/LABEL.md) \
-[tksimple.Listbox](/widgets/LABEL.md) \
-[tksimple.TreeView](/widgets/LABEL.md) \
-[tksimple.Frame](/widgets/LABEL.md) \
-[tksimple.LabelFrame](/widgets/LABEL.md) \
-[tksimple.Checkbutton](/widgets/LABEL.md) \
-[tksimple.Radiobutton](/widgets/LABEL.md) \
-[tksimple.Scale](/widgets/LABEL.md) \
-[tksimple.Progressbar](/widgets/LABEL.md) \
-[tksimple.SpinBox](/widgets/LABEL.md) \
-[tksimple.DropdownMenu](/widgets/LABEL.md) \
-[tksimple.Separator](/widgets/LABEL.md) \
-[tksimple.TaskBar](/widgets/LABEL.md) \
-[tksimple.ContextMenu](/widgets/LABEL.md) \
-[tksimple.Notebook](/widgets/LABEL.md) \
-[tksimple.Canvas](/widgets/LABEL.md) \
-[tksimple.DndCanvas](/widgets/LABEL.md) 
+* [tksimple.Label](/widgets/LABEL.md)
+* [tksimple.Button](/widgets/BUTTON.md)
+* [tksimple.Entry](/widgets/ENTRY.md)
+* [tksimple.Text](/widgets/TEXT.md)
+* [tksimple.Listbox](/widgets/LISTBOX.md)
+* [tksimple.TreeView](/widgets/TREEVIEW.md)
+* [tksimple.Frame](/widgets/FRAME.md)
+* [tksimple.LabelFrame](/widgets/LABELFRAME.md)
+* [tksimple.Checkbutton](/widgets/CHECKBUTTON.md)
+* [tksimple.ScrollBar](/widgets/SCROLLBAR.md)
+* [tksimple.Scale](/widgets/SCALE.md)
+* [tksimple.Progressbar](/widgets/PROGRESSBAR.md)
+* [tksimple.SpinBox](/widgets/SPINBOX.md)
+* [tksimple.DropdownMenu](/widgets/DROPDOWNMENU.md)
+* [tksimple.Separator](/widgets/SEPARATOR.md)
+* [tksimple.TaskBar](/widgets/TASKBAR.md)
+* [tksimple.NotebookTab](/widgets/NOTEBOOKTAB.md)
+* [tksimple.Notebook](/widgets/NOTEBOOK.md)
 #### Dialogs
-[tksimple.SimpleDialog](/widgets/LABEL.md) \
-[tksimple.FileDialog](/widgets/LABEL.md) \
-[tksimple.ColorChooser](/widgets/LABEL.md)
 #### Custom Widgets
-[tksimple.TextEntry](/widgets/LABEL.md) \
-[tksimple.OnOffButton](/widgets/LABEL.md) \
-[tksimple.Calendar](/widgets/LABEL.md) \
-[tksimple.DropdownCalendar](/widgets/LABEL.md) \
-[tksimple.MatPlotLibFigure](/widgets/LABEL.md) \
-[tksimple.MenuPage](/widgets/LABEL.md) \
-[tksimple.additionalWidgets.CompleterEntry](/widgets/LABEL.md) 
+* [tksimple.ContextMenu](/widgets/CONTEXTMENU.md)
+* [tksimple.MenuPage](/widgets/MENUPAGE.md)
+* [tksimple.TextEntry](/widgets/TEXTENTRY.md)
+* [tksimple.TextDropdownMenu](/widgets/TEXTDROPDOWNMENU.md)
+* [tksimple.OnOffButton](/widgets/ONOFFBUTTON.md)
+* [tksimple.Calendar](/widgets/CALENDAR.md)
+* [tksimple.DropdownCalendar](/widgets/DROPDOWNCALENDAR.md)
+* [tksimple.MatPlotLibFigure](/widgets/MATPLOTLIBFIGURE.md)
+* [tksimple.PDFViewer](/widgets/PDFVIEWER.md)
+#### Canvas
+* [tksimple.Canvas](/widgets/CANVAS.md)
 ### Utility classes/functions
-[tksimple.WidgetGroup](/widgets/LABEL.md) \
-[tksimple.CustomRunnable](/widgets/LABEL.md) \
-[tksimple.Placer](/widgets/LABEL.md)
 ### Place / Pack Manager
-[place method](/widgets/LABEL.md) \
-[placeRelative method](/widgets/LABEL.md) \
-[grid method](/widgets/LABEL.md)
+* [place method](/widgets/LABEL.md)
+* [placeRelative method](/widgets/LABEL.md)
+* [grid method](/widgets/LABEL.md)
 ### Example Projects
